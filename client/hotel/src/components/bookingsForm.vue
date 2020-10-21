@@ -24,7 +24,7 @@ export default {
         return{
             name:"",
             email:"",
-            bookedIn:false
+            bookedIn:'false'
         }
     },
     methods:{
