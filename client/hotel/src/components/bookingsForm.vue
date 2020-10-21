@@ -7,9 +7,9 @@
         <input id='emailaddress' v-model="email" required/>
         <p>Check in now?</p>
         <label for="true">Yes</label>
-        <input type="radio" value='true' name="check" id='true'>
+        <input type="radio" value='true' name="check" id='true' v-model='bookedIn'>
         <label for="false">No</label>
-        <input type="radio" value='false' name="check" id='false'>
+        <input type="radio" value='false' name="check" id='false' v-model='bookedIn'>
         <input type="submit">
       </form>
 
