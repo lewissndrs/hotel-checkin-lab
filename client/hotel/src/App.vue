@@ -23,7 +23,7 @@ export default {
     }
   },
   mounted(){
-    
+
 
     eventBus.$on('booking-added',(booking) => {
       this.bookings.push(booking)
@@ -37,5 +37,10 @@ export default {
 </script>
 
 <style>
+
+#app {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
 
 </style>
