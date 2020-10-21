@@ -11,6 +11,7 @@
 import bookingsForm from './components/bookingsForm';
 import bookingsList from './components/bookingsList';
 import {eventBus} from './main.js';
+import bookingsService from './services/bookingsService';
 export default {
   name: 'app',
   components: {
@@ -23,9 +24,11 @@ export default {
     }
   },
   mounted(){
-
+    bookingsService.getBookings()
+    .then(bookings => this.bookings = bookings)
 
     eventBus.$on('booking-added',(booking) => {
+      // console.log('booking',booking)
       this.bookings.push(booking)
     }),
     eventBus.$on('booking-deleted', (id) => {
